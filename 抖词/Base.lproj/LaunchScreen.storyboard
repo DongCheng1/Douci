@@ -18,29 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8M-fg-xWQ">
-                                <rect key="frame" x="73.5" y="291" width="227" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="短视频背词软件">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.93980731870000001" green="0.32474618379999998" blue="0.27591789589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKk-fE-cdn">
-                                <rect key="frame" x="88" y="220" width="199" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="抖词——专业的">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.93980731870000001" green="0.32474618379999998" blue="0.27591789589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-32-TmE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.22151662794874175" green="0.96668555699481862" blue="0.076307220136748358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JKk-fE-cdn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3DF-F8-Gbh"/>
-                            <constraint firstItem="JKk-fE-cdn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="E45-TK-65D"/>
-                            <constraint firstItem="V8M-fg-xWQ" firstAttribute="top" secondItem="JKk-fE-cdn" secondAttribute="bottom" constant="25" id="m2g-ow-jes"/>
-                            <constraint firstItem="V8M-fg-xWQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wPr-uU-Ipi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fo6-32-TmE" secondAttribute="trailing" id="MXP-Jn-GDR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fo6-32-TmE" secondAttribute="bottom" id="TbO-NQ-FyR"/>
+                            <constraint firstItem="fo6-32-TmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="W2B-JC-lDB"/>
+                            <constraint firstItem="fo6-32-TmE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z5i-Lo-Bcq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -50,4 +37,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="timg" width="1080" height="1920"/>
+    </resources>
 </document>

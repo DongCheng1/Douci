@@ -116,10 +116,10 @@ static const NSString *const kJPVideoPlayerContentRangeKey = @"Content-Range";
 
 - (void)startOnQueue:(dispatch_queue_t)queue {
     dispatch_async(queue, ^{
-        int lock = pthread_mutex_trylock(&_lock);;
+        int lock = pthread_mutex_trylock(&self->_lock);;
         self.executing = YES;
         if (!lock) {
-            pthread_mutex_unlock(&_lock);
+            pthread_mutex_unlock(&self->_lock);
         }
     });
 }

@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"hahaahahahaha");
+    NSLog(@"hahaahahahaha");
     //获取json的所有数据
     NSURL *url = [NSURL URLWithString:@"http://www.studynumber.com/wordskill/json/words.json"];
     NSData *jsonData = [NSData dataWithContentsOfURL:url];
@@ -140,8 +141,6 @@
 
 
 
-
-
 //集合视图的委托协议delegate
 //- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
   //self.dicword = self.words[indexPath.section * COL_NUM + indexPath.row];
@@ -166,9 +165,6 @@
     
     [self presentViewController:detailViewController2 animated:YES completion:nil];
 }
-
-
-
 
 
 - (void)didReceiveMemoryWarning {

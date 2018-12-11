@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		9BF170E4FBECC2BECE02C45B /* libPods-抖词.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E75BE723F44D1DC0218083 /* libPods-抖词.a */; };
+		B447241221BEF4A700CCD2E0 /* DCFriendshipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723F121BEF4A700CCD2E0 /* DCFriendshipViewController.m */; };
+		B447241321BEF4A700CCD2E0 /* DCPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */; };
+		B447241421BEF4A700CCD2E0 /* DCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723FD21BEF4A700CCD2E0 /* DCEssenceViewController.m */; };
+		B447241521BEF4A700CCD2E0 /* DCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B447240221BEF4A700CCD2E0 /* DCMeViewController.m */; };
+		B447241621BEF4A700CCD2E0 /* DCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B447240821BEF4A700CCD2E0 /* DCNewViewController.m */; };
+		B447241721BEF4A700CCD2E0 /* DCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B447240F21BEF4A700CCD2E0 /* DCTabBarController.m */; };
+		B447241B21BEF4C600CCD2E0 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = B447241921BEF4C600CCD2E0 /* UIImage+image.m */; };
+		B447242121C000F900CCD2E0 /* DCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B447242021C000F900CCD2E0 /* DCTabBar.m */; };
+		B447242721C018AE00CCD2E0 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B447242621C018AE00CCD2E0 /* UIView+Frame.m */; };
 		B4F8AB3D21A701A200FB6C7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F8AB3C21A701A200FB6C7A /* AppDelegate.m */; };
-		B4F8AB4021A701A200FB6C7A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F8AB3F21A701A200FB6C7A /* FirstViewController.m */; };
-		B4F8AB4321A701A200FB6C7A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F8AB4221A701A200FB6C7A /* SecondViewController.m */; };
 		B4F8AB4621A701A200FB6C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F8AB4421A701A200FB6C7A /* Main.storyboard */; };
 		B4F8AB4821A701A300FB6C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F8AB4721A701A300FB6C7A /* Assets.xcassets */; };
 		B4F8AB4B21A701A300FB6C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F8AB4921A701A300FB6C7A /* LaunchScreen.storyboard */; };
@@ -37,13 +44,27 @@
 		16E75BE723F44D1DC0218083 /* libPods-抖词.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-抖词.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D229EE3ACDB1BDBEAB6836 /* Pods-抖词.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-抖词.debug.xcconfig"; path = "Pods/Target Support Files/Pods-抖词/Pods-抖词.debug.xcconfig"; sourceTree = "<group>"; };
 		AAE1F0DF6EADF8F191C60221 /* Pods-抖词.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-抖词.release.xcconfig"; path = "Pods/Target Support Files/Pods-抖词/Pods-抖词.release.xcconfig"; sourceTree = "<group>"; };
+		B44723F021BEF4A700CCD2E0 /* DCFriendshipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFriendshipViewController.h; sourceTree = "<group>"; };
+		B44723F121BEF4A700CCD2E0 /* DCFriendshipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFriendshipViewController.m; sourceTree = "<group>"; };
+		B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPublishViewController.m; sourceTree = "<group>"; };
+		B44723F721BEF4A700CCD2E0 /* DCPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPublishViewController.h; sourceTree = "<group>"; };
+		B44723FC21BEF4A700CCD2E0 /* DCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCEssenceViewController.h; sourceTree = "<group>"; };
+		B44723FD21BEF4A700CCD2E0 /* DCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCEssenceViewController.m; sourceTree = "<group>"; };
+		B447240221BEF4A700CCD2E0 /* DCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMeViewController.m; sourceTree = "<group>"; };
+		B447240321BEF4A700CCD2E0 /* DCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMeViewController.h; sourceTree = "<group>"; };
+		B447240821BEF4A700CCD2E0 /* DCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNewViewController.m; sourceTree = "<group>"; };
+		B447240921BEF4A700CCD2E0 /* DCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNewViewController.h; sourceTree = "<group>"; };
+		B447240E21BEF4A700CCD2E0 /* DCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTabBarController.h; sourceTree = "<group>"; };
+		B447240F21BEF4A700CCD2E0 /* DCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTabBarController.m; sourceTree = "<group>"; };
+		B447241921BEF4C600CCD2E0 /* UIImage+image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
+		B447241A21BEF4C600CCD2E0 /* UIImage+image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
+		B447241F21C000F800CCD2E0 /* DCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTabBar.h; sourceTree = "<group>"; };
+		B447242021C000F900CCD2E0 /* DCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTabBar.m; sourceTree = "<group>"; };
+		B447242521C018AE00CCD2E0 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		B447242621C018AE00CCD2E0 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		B4F8AB3821A701A200FB6C7A /* 抖词.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "抖词.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F8AB3B21A701A200FB6C7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4F8AB3C21A701A200FB6C7A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4F8AB3E21A701A200FB6C7A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		B4F8AB3F21A701A200FB6C7A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B4F8AB4121A701A200FB6C7A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B4F8AB4221A701A200FB6C7A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B4F8AB4521A701A200FB6C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4F8AB4721A701A300FB6C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F8AB4A21A701A300FB6C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,6 +127,241 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B44723EC21BEF38F00CCD2E0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B447241821BEF4C600CCD2E0 /* Category */,
+				B4F8AB3B21A701A200FB6C7A /* AppDelegate.h */,
+				B4F8AB3C21A701A200FB6C7A /* AppDelegate.m */,
+				B4F8AB4D21A701A300FB6C7A /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B44723ED21BEF4A700CCD2E0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B44723EE21BEF4A700CCD2E0 /* FriendTrend */,
+				B44723F421BEF4A700CCD2E0 /* Publish */,
+				B44723FA21BEF4A700CCD2E0 /* Essence */,
+				B447240021BEF4A700CCD2E0 /* Me */,
+				B447240621BEF4A700CCD2E0 /* New */,
+				B447240C21BEF4A700CCD2E0 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B44723EE21BEF4A700CCD2E0 /* FriendTrend */ = {
+			isa = PBXGroup;
+			children = (
+				B44723EF21BEF4A700CCD2E0 /* Controller */,
+				B44723F221BEF4A700CCD2E0 /* Model */,
+				B44723F321BEF4A700CCD2E0 /* View */,
+			);
+			path = FriendTrend;
+			sourceTree = "<group>";
+		};
+		B44723EF21BEF4A700CCD2E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B44723F021BEF4A700CCD2E0 /* DCFriendshipViewController.h */,
+				B44723F121BEF4A700CCD2E0 /* DCFriendshipViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B44723F221BEF4A700CCD2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B44723F321BEF4A700CCD2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44723F421BEF4A700CCD2E0 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				B44723F521BEF4A700CCD2E0 /* Controller */,
+				B44723F821BEF4A700CCD2E0 /* Model */,
+				B44723F921BEF4A700CCD2E0 /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		B44723F521BEF4A700CCD2E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */,
+				B44723F721BEF4A700CCD2E0 /* DCPublishViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B44723F821BEF4A700CCD2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B44723F921BEF4A700CCD2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B44723FA21BEF4A700CCD2E0 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				B44723FB21BEF4A700CCD2E0 /* Controller */,
+				B44723FE21BEF4A700CCD2E0 /* Model */,
+				B44723FF21BEF4A700CCD2E0 /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		B44723FB21BEF4A700CCD2E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B44723FC21BEF4A700CCD2E0 /* DCEssenceViewController.h */,
+				B44723FD21BEF4A700CCD2E0 /* DCEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B44723FE21BEF4A700CCD2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B44723FF21BEF4A700CCD2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B447240021BEF4A700CCD2E0 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				B447240121BEF4A700CCD2E0 /* Controller */,
+				B447240421BEF4A700CCD2E0 /* Model */,
+				B447240521BEF4A700CCD2E0 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		B447240121BEF4A700CCD2E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B447240221BEF4A700CCD2E0 /* DCMeViewController.m */,
+				B447240321BEF4A700CCD2E0 /* DCMeViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B447240421BEF4A700CCD2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B447240521BEF4A700CCD2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B447240621BEF4A700CCD2E0 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				B447240721BEF4A700CCD2E0 /* Controller */,
+				B447240A21BEF4A700CCD2E0 /* Model */,
+				B447240B21BEF4A700CCD2E0 /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		B447240721BEF4A700CCD2E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B447240821BEF4A700CCD2E0 /* DCNewViewController.m */,
+				B447240921BEF4A700CCD2E0 /* DCNewViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B447240A21BEF4A700CCD2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B447240B21BEF4A700CCD2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B447240C21BEF4A700CCD2E0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B447240D21BEF4A700CCD2E0 /* Controller */,
+				B447241021BEF4A700CCD2E0 /* Model */,
+				B447241121BEF4A700CCD2E0 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B447240D21BEF4A700CCD2E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B447240E21BEF4A700CCD2E0 /* DCTabBarController.h */,
+				B447240F21BEF4A700CCD2E0 /* DCTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B447241021BEF4A700CCD2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B447241121BEF4A700CCD2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B447241F21C000F800CCD2E0 /* DCTabBar.h */,
+				B447242021C000F900CCD2E0 /* DCTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B447241821BEF4C600CCD2E0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B447241921BEF4C600CCD2E0 /* UIImage+image.m */,
+				B447241A21BEF4C600CCD2E0 /* UIImage+image.h */,
+				B447242521C018AE00CCD2E0 /* UIView+Frame.h */,
+				B447242621C018AE00CCD2E0 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		B4F8AB2F21A701A200FB6C7A = {
 			isa = PBXGroup;
 			children = (
@@ -127,20 +383,15 @@
 		B4F8AB3A21A701A200FB6C7A /* 抖词 */ = {
 			isa = PBXGroup;
 			children = (
-				B4F8ABA321A9763900FB6C7A /* JPVideoPlayer */,
+				B44723ED21BEF4A700CCD2E0 /* Classes */,
 				B4F8AB9F21A975D800FB6C7A /* JPVideoPlayerDouyinViewController.h */,
 				B4F8ABA021A975D800FB6C7A /* JPVideoPlayerDouyinViewController.m */,
-				B4F8AB3E21A701A200FB6C7A /* FirstViewController.h */,
-				B4F8AB3F21A701A200FB6C7A /* FirstViewController.m */,
-				B4F8AB4121A701A200FB6C7A /* SecondViewController.h */,
-				B4F8AB4221A701A200FB6C7A /* SecondViewController.m */,
 				B4F8AB4421A701A200FB6C7A /* Main.storyboard */,
 				B4F8AB4721A701A300FB6C7A /* Assets.xcassets */,
 				B4F8AB4921A701A300FB6C7A /* LaunchScreen.storyboard */,
 				B4F8AB4C21A701A300FB6C7A /* Info.plist */,
-				B4F8AB3B21A701A200FB6C7A /* AppDelegate.h */,
-				B4F8AB3C21A701A200FB6C7A /* AppDelegate.m */,
-				B4F8AB4D21A701A300FB6C7A /* main.m */,
+				B44723EC21BEF38F00CCD2E0 /* Other */,
+				B4F8ABA321A9763900FB6C7A /* JPVideoPlayer */,
 			);
 			path = "抖词";
 			sourceTree = "<group>";
@@ -286,24 +537,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F8ABCD21A9763A00FB6C7A /* JPVideoPlayer.m in Sources */,
-				B4F8AB4321A701A200FB6C7A /* SecondViewController.m in Sources */,
 				B4F8ABCE21A9763A00FB6C7A /* JPVideoPlayerSupportUtils.m in Sources */,
+				B447241621BEF4A700CCD2E0 /* DCNewViewController.m in Sources */,
 				B4F8ABCB21A9763A00FB6C7A /* UITableView+WebVideoCache.m in Sources */,
 				B4F8ABC821A9763A00FB6C7A /* JPVideoPlayerCacheFile.m in Sources */,
 				B4F8ABA121A975D800FB6C7A /* JPVideoPlayerDouyinViewController.m in Sources */,
 				B4F8ABC921A9763A00FB6C7A /* JPVideoPlayerControlViews.m in Sources */,
+				B447241321BEF4A700CCD2E0 /* DCPublishViewController.m in Sources */,
 				B4F8ABC321A9763A00FB6C7A /* JPVideoPlayerDownloader.m in Sources */,
+				B447241421BEF4A700CCD2E0 /* DCEssenceViewController.m in Sources */,
+				B447241721BEF4A700CCD2E0 /* DCTabBarController.m in Sources */,
 				B4F8ABC721A9763A00FB6C7A /* JPVideoPlayerResourceLoader.m in Sources */,
 				B4F8ABC621A9763A00FB6C7A /* JPVideoPlayerCompat.m in Sources */,
 				B4F8AB3D21A701A200FB6C7A /* AppDelegate.m in Sources */,
 				B4F8AB4E21A701A300FB6C7A /* main.m in Sources */,
+				B447241221BEF4A700CCD2E0 /* DCFriendshipViewController.m in Sources */,
 				B4F8ABCF21A9763A00FB6C7A /* UITableViewCell+WebVideoCache.m in Sources */,
+				B447241B21BEF4C600CCD2E0 /* UIImage+image.m in Sources */,
+				B447242721C018AE00CCD2E0 /* UIView+Frame.m in Sources */,
 				B4F8ABD021A9763A00FB6C7A /* JPVideoPlayerCachePath.m in Sources */,
+				B447242121C000F900CCD2E0 /* DCTabBar.m in Sources */,
 				B4F8ABC521A9763A00FB6C7A /* UIView+WebVideoCache.m in Sources */,
 				B4F8ABC421A9763A00FB6C7A /* JPVideoPlayerCache.m in Sources */,
 				B4F8ABCC21A9763A00FB6C7A /* JPVideoPlayerManager.m in Sources */,
-				B4F8AB4021A701A200FB6C7A /* FirstViewController.m in Sources */,
 				B4F8ABD121A9763A00FB6C7A /* JPResourceLoadingRequestTask.m in Sources */,
+				B447241521BEF4A700CCD2E0 /* DCMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

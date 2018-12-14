@@ -9,7 +9,7 @@
 #import "DCNavigationViewController.h"
 #import "UIBarButtonItem+Item.h"
 
-@interface DCNavigationViewController ()
+@interface DCNavigationViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -28,7 +28,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.interactivePopGestureRecognizer.delegate = self;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return self.childViewControllers.count > 1;
 }
 
 //设置导航条返回键

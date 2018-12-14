@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIBarButtonItem+Item.h"
 
 @interface DCMeViewController : UITableViewController
 

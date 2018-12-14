@@ -7,6 +7,7 @@
 //
 
 #import "DCFriendshipViewController.h"
+#import "UIBarButtonItem+Item.h"
 
 @interface DCFriendshipViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor blueColor];
+    //设置导航条
+    [self setupNavBar];
+}
+
+
+//设置导航条
+- (void)setupNavBar {
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:nil];
+    self.navigationItem.title = @"我的关注";
 }
 
 - (void)didReceiveMemoryWarning {

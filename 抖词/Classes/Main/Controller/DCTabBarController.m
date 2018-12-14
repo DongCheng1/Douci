@@ -14,12 +14,27 @@
 #import "DCFriendshipViewController.h"
 #import "UIImage+image.h"
 #import "DCTabBar.h"
+#import "UIView+Frame.h"
 
 @interface DCTabBarController ()
 
 @end
 
 @implementation DCTabBarController
+
+//设置tabBarItem字体颜色
++ (void)load {
+    UITabBarItem *item = [UITabBarItem appearance];
+    //设置文字颜色
+    NSMutableDictionary *dic1 = [NSMutableDictionary dictionary];
+    dic1[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:dic1 forState:UIControlStateSelected];
+    //设置文字大小
+    NSMutableDictionary *dic2 = [NSMutableDictionary dictionary];
+    dic2[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    [item setTitleTextAttributes:dic2 forState:UIControlStateNormal];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

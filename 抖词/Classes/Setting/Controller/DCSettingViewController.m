@@ -1,46 +1,28 @@
 //
-//  DCMeViewController.m
+//  DCSettingViewController.m
 //  Baisibudejie
 //
-//  Created by 董成 on 2018/12/10.
+//  Created by 董成 on 2018/12/14.
 //  Copyright © 2018 董成. All rights reserved.
 //
 
-#import "DCMeViewController.h"
 #import "DCSettingViewController.h"
-
-@interface DCMeViewController ()
+#import "UIBarButtonItem+Item.h"
+@interface DCSettingViewController ()
 
 @end
 
-@implementation DCMeViewController
+@implementation DCSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //设置导航条返回键
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backitemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
     
-    //设置导航条
-    [self setupNavBar];
-}
-//设置导航条
-- (void)setupNavBar {
-    
-    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
-    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
-    
-    self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
-    self.navigationItem.title = @"我的";
 }
 
-
-//跳转到设置界面
-- (void)setting {
-    DCSettingViewController *settingVC = [[DCSettingViewController alloc]init];
-    settingVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:settingVC animated:nil];
-}
-
-- (void)night:(UIButton *)button {
-    button.selected = !button.selected;
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

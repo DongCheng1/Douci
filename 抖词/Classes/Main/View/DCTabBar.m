@@ -7,6 +7,7 @@
 //
 
 #import "DCTabBar.h"
+#import "JPVideoPlayerDouyinViewController.h"
 
 @interface DCTabBar ()
 @property (nonatomic,weak) UIButton *plusButton;
@@ -19,9 +20,17 @@
     [plusButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
     [plusButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
     [plusButton sizeToFit];
+    [plusButton addTarget:self action:@selector(PBact) forControlEvents:UIControlEventTouchUpInside];
     _plusButton = plusButton;
+    
     [self addSubview:_plusButton];
     return _plusButton;
+}
+
+//点击跳转
+- (void)PBact {
+    //JPVideoPlayerDouyinViewController *jpVc = [[JPVideoPlayerDouyinViewController alloc]init];
+    NSLog(@"哈哈，我是中间的button");
 }
 
 - (void)layoutSubviews {

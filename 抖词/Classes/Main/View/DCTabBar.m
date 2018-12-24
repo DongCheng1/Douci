@@ -30,7 +30,7 @@
 //点击跳转
 - (void)PBact {
     //JPVideoPlayerDouyinViewController *jpVc = [[JPVideoPlayerDouyinViewController alloc]init];
-    NSLog(@"哈哈，我是中间的button");
+    NSLog(@"我是中间的button");
 }
 
 - (void)layoutSubviews {

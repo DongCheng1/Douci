@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9BF170E4FBECC2BECE02C45B /* libPods-抖词.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E75BE723F44D1DC0218083 /* libPods-抖词.a */; };
+		B41BA88221D0CDE0006B1D5B /* DCMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41BA88121D0CDE0006B1D5B /* DCMeViewController.storyboard */; };
 		B447241321BEF4A700CCD2E0 /* DCPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */; };
 		B447241421BEF4A700CCD2E0 /* DCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723FD21BEF4A700CCD2E0 /* DCEssenceViewController.m */; };
 		B447241521BEF4A700CCD2E0 /* DCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B447240221BEF4A700CCD2E0 /* DCMeViewController.m */; };
@@ -71,6 +72,7 @@
 		16E75BE723F44D1DC0218083 /* libPods-抖词.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-抖词.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D229EE3ACDB1BDBEAB6836 /* Pods-抖词.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-抖词.debug.xcconfig"; path = "Pods/Target Support Files/Pods-抖词/Pods-抖词.debug.xcconfig"; sourceTree = "<group>"; };
 		AAE1F0DF6EADF8F191C60221 /* Pods-抖词.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-抖词.release.xcconfig"; path = "Pods/Target Support Files/Pods-抖词/Pods-抖词.release.xcconfig"; sourceTree = "<group>"; };
+		B41BA88121D0CDE0006B1D5B /* DCMeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DCMeViewController.storyboard; sourceTree = "<group>"; };
 		B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPublishViewController.m; sourceTree = "<group>"; };
 		B44723F721BEF4A700CCD2E0 /* DCPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPublishViewController.h; sourceTree = "<group>"; };
 		B44723FC21BEF4A700CCD2E0 /* DCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCEssenceViewController.h; sourceTree = "<group>"; };
@@ -299,8 +301,9 @@
 		B447240121BEF4A700CCD2E0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B447240221BEF4A700CCD2E0 /* DCMeViewController.m */,
 				B447240321BEF4A700CCD2E0 /* DCMeViewController.h */,
+				B447240221BEF4A700CCD2E0 /* DCMeViewController.m */,
+				B41BA88121D0CDE0006B1D5B /* DCMeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				B4CFB08021C816D400D834BD /* LaunchImage.png in Resources */,
 				B49BFF4021D08F1500FC4825 /* DCFriendshipViewController.xib in Resources */,
 				B4CFB07A21C816D400D834BD /* LaunchImage@2x.png in Resources */,
+				B41BA88221D0CDE0006B1D5B /* DCMeViewController.storyboard in Resources */,
 				B49BFF0321CECA7E00FC4825 /* DCADViewController.xib in Resources */,
 				B4F8AB4B21A701A300FB6C7A /* LaunchScreen.storyboard in Resources */,
 				B4CFB07F21C816D400D834BD /* LaunchImage-700-568h@2x.png in Resources */,

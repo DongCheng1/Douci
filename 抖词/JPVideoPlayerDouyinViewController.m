@@ -2,6 +2,7 @@
 
 #import "JPVideoPlayerDouyinViewController.h"
 #import "JPVideoPlayerKit.h"
+#import "UIBarButtonItem+Item.h"
 
 @interface JPDouyinProgressView: JPVideoPlayerProgressView
 
@@ -50,7 +51,15 @@ nearestViewControllerInViewTree:nearestViewController
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     [self setup];
+    //设置导航条
+    [self setupNavBar];
 }
+
+//设置导航条
+- (void)setupNavBar {
+    self.navigationItem.title = @"抖词短视频";
+}
+
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];

@@ -17,20 +17,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     //设置导航条
     [self setupNavBar];
+    //设置tableview的底部视图
+    [self setupFootView];
 }
+
+#pragma mark - 设置tableView的底部视图
+- (void)setupFootView {
+    
+}
+
+
 //设置导航条
 - (void)setupNavBar {
-    
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
     UIBarButtonItem *moonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
-    
     self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
     self.navigationItem.title = @"我的";
 }
-
 
 //跳转到设置界面
 - (void)setting {
@@ -50,6 +55,7 @@
 
 #pragma mark - Table view data source
 
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 0;
 }
@@ -57,6 +63,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
 }
+*/
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

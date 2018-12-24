@@ -70,7 +70,9 @@
     DCFriendshipViewController *fsVc = [[DCFriendshipViewController alloc]init];
     UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:fsVc];
     [self addChildViewController:nav3];
-    DCMeViewController *meVc = [[DCMeViewController alloc]init];
+    //手动加载我的界面
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:NSStringFromClass([DCMeViewController class]) bundle:nil];
+    DCMeViewController *meVc = [storyboard instantiateInitialViewController];
     UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:meVc];
     [self addChildViewController:nav4];
 }

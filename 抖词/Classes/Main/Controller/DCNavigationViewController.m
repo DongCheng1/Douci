@@ -25,7 +25,7 @@
     [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
-
+//全屏返回
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
@@ -34,7 +34,7 @@
     self.interactivePopGestureRecognizer.enabled = NO;
 }
 
-
+//防止程序假死
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     return self.childViewControllers.count > 1;
 }
@@ -48,6 +48,7 @@
     //真正的跳转
     [super pushViewController:viewController animated:animated];
 }
+
 - (void)back {
     [self popViewControllerAnimated:YES];
 }

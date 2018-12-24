@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9BF170E4FBECC2BECE02C45B /* libPods-抖词.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E75BE723F44D1DC0218083 /* libPods-抖词.a */; };
 		B41BA88221D0CDE0006B1D5B /* DCMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41BA88121D0CDE0006B1D5B /* DCMeViewController.storyboard */; };
+		B41BA88921D10B91006B1D5B /* DCSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA88721D10B91006B1D5B /* DCSquareCell.m */; };
+		B41BA88A21D10B91006B1D5B /* DCSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41BA88821D10B91006B1D5B /* DCSquareCell.xib */; };
+		B41BA88D21D13029006B1D5B /* DCSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA88C21D13029006B1D5B /* DCSquareItem.m */; };
 		B447241321BEF4A700CCD2E0 /* DCPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */; };
 		B447241421BEF4A700CCD2E0 /* DCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723FD21BEF4A700CCD2E0 /* DCEssenceViewController.m */; };
 		B447241521BEF4A700CCD2E0 /* DCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B447240221BEF4A700CCD2E0 /* DCMeViewController.m */; };
@@ -73,6 +76,11 @@
 		21D229EE3ACDB1BDBEAB6836 /* Pods-抖词.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-抖词.debug.xcconfig"; path = "Pods/Target Support Files/Pods-抖词/Pods-抖词.debug.xcconfig"; sourceTree = "<group>"; };
 		AAE1F0DF6EADF8F191C60221 /* Pods-抖词.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-抖词.release.xcconfig"; path = "Pods/Target Support Files/Pods-抖词/Pods-抖词.release.xcconfig"; sourceTree = "<group>"; };
 		B41BA88121D0CDE0006B1D5B /* DCMeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DCMeViewController.storyboard; sourceTree = "<group>"; };
+		B41BA88621D10B91006B1D5B /* DCSquareCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCSquareCell.h; sourceTree = "<group>"; };
+		B41BA88721D10B91006B1D5B /* DCSquareCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCSquareCell.m; sourceTree = "<group>"; };
+		B41BA88821D10B91006B1D5B /* DCSquareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCSquareCell.xib; sourceTree = "<group>"; };
+		B41BA88B21D13029006B1D5B /* DCSquareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCSquareItem.h; sourceTree = "<group>"; };
+		B41BA88C21D13029006B1D5B /* DCSquareItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCSquareItem.m; sourceTree = "<group>"; };
 		B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPublishViewController.m; sourceTree = "<group>"; };
 		B44723F721BEF4A700CCD2E0 /* DCPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPublishViewController.h; sourceTree = "<group>"; };
 		B44723FC21BEF4A700CCD2E0 /* DCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCEssenceViewController.h; sourceTree = "<group>"; };
@@ -311,6 +319,8 @@
 		B447240421BEF4A700CCD2E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B41BA88B21D13029006B1D5B /* DCSquareItem.h */,
+				B41BA88C21D13029006B1D5B /* DCSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +328,9 @@
 		B447240521BEF4A700CCD2E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B41BA88621D10B91006B1D5B /* DCSquareCell.h */,
+				B41BA88721D10B91006B1D5B /* DCSquareCell.m */,
+				B41BA88821D10B91006B1D5B /* DCSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -692,6 +705,7 @@
 				B4F8ABCA21A9763A00FB6C7A /* JPVideoPlayer.bundle in Resources */,
 				B49BFF4421D08F1500FC4825 /* DCFastLoginView.xib in Resources */,
 				B49BFF2A21D08B1700FC4825 /* DCSubTagCell.xib in Resources */,
+				B41BA88A21D10B91006B1D5B /* DCSquareCell.xib in Resources */,
 				B49BFF0621CECA7E00FC4825 /* ad.plist in Resources */,
 				B4CFB07C21C816D400D834BD /* LaunchImage-800-667h@2x.png in Resources */,
 				B4F8AB4821A701A300FB6C7A /* Assets.xcassets in Resources */,
@@ -756,6 +770,7 @@
 				B4F8ABCB21A9763A00FB6C7A /* UITableView+WebVideoCache.m in Sources */,
 				B49BFF5121D08F6500FC4825 /* UIBarButtonItem+Item.m in Sources */,
 				B49BFF2621D08B1700FC4825 /* DCNewViewController.m in Sources */,
+				B41BA88921D10B91006B1D5B /* DCSquareCell.m in Sources */,
 				B4F8ABC821A9763A00FB6C7A /* JPVideoPlayerCacheFile.m in Sources */,
 				B447243321C2B8DF00CCD2E0 /* DCNavigationViewController.m in Sources */,
 				B4F8ABA121A975D800FB6C7A /* JPVideoPlayerDouyinViewController.m in Sources */,
@@ -778,6 +793,7 @@
 				B49BFF2721D08B1700FC4825 /* DCBQTableViewController.m in Sources */,
 				B49BFF4221D08F1500FC4825 /* DCFastButton.m in Sources */,
 				B49BFF0521CECA7E00FC4825 /* DCADitem.m in Sources */,
+				B41BA88D21D13029006B1D5B /* DCSquareItem.m in Sources */,
 				B4F8ABD021A9763A00FB6C7A /* JPVideoPlayerCachePath.m in Sources */,
 				B447242121C000F900CCD2E0 /* DCTabBar.m in Sources */,
 				B4F8ABC521A9763A00FB6C7A /* UIView+WebVideoCache.m in Sources */,

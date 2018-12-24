@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DCTabBarController.h"
+#import "DCADViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     //为这个窗口设置根控制器
     DCTabBarController *tabBarVc = [[DCTabBarController alloc]init];
     self.window.rootViewController = tabBarVc;
+    //DCADViewController *ADVc = [[DCADViewController alloc]init];
+    //self.window.rootViewController = ADVc;
     //显示窗口
     [self.window makeKeyAndVisible];
     return YES;

@@ -28,8 +28,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.interactivePopGestureRecognizer.delegate = self;
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:pan];
+    pan.delegate = self;
+    self.interactivePopGestureRecognizer.enabled = NO;
 }
+
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     return self.childViewControllers.count > 1;

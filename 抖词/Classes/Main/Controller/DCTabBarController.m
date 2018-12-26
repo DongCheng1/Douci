@@ -52,7 +52,7 @@
 - (void)setupTabBar {
     DCTabBar *dcTabBar = [[DCTabBar alloc]init];
     [self setValue:dcTabBar forKey:@"tabBar"];
-    NSLog(@"--->%@",self.tabBar);
+    //NSLog(@"--->%@",self.tabBar);
 }
 
 
@@ -95,7 +95,7 @@
     self.childViewControllers[2].tabBarItem.image = [UIImage imageOriginalWithName:@"tabBar_friendTrends_icon"];
     self.childViewControllers[2].tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_friendTrends_click_icon"];
     
-    self.childViewControllers[3].tabBarItem.title = @"我";
+    self.childViewControllers[3].tabBarItem.title = @"休闲";
     self.childViewControllers[3].tabBarItem.image = [UIImage imageOriginalWithName:@"tabBar_me_icon"];
     self.childViewControllers[3].tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_me_click_icon"];
 }

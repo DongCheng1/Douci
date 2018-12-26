@@ -13,12 +13,14 @@
 #import "DCSquareCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
+#import "DCWebViewController.h"
 
 
 static NSString * const ID = @"cell";
 
-@interface DCMeViewController ()<UICollectionViewDataSource>
-@property (nonatomic,strong) NSArray *squareItems;
+@interface DCMeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@property (nonatomic,strong) NSMutableArray *squareItems;
+@property (nonatomic,strong) NSMutableArray *squareItems2;
 @property (nonatomic,weak) UICollectionView *collectionView;
 @end
 
@@ -32,6 +34,10 @@ static NSString * const ID = @"cell";
     [self setupFootView];
     //请求数据
     [self requestdata];
+    //处理cell间距
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = 0;
+    self.tableView.contentInset = UIEdgeInsetsMake(-34, 0, 0, 0);
 }
 
 #pragma mark - 请求数据
@@ -41,11 +47,23 @@ static NSString * const ID = @"cell";
     parameters[@"a"] = @"square";
     parameters[@"c"] = @"topic";
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
-        NSLog(@"哈哈哈%@",responseObject);
-        [responseObject writeToFile:@"/Users/dongcheng/Desktop/Project collection/抖词/抖词/Classes/Me/square.plist" atomically:YES];
+        //NSLog(@"哈哈哈%@",responseObject);
+        //[responseObject writeToFile:@"/Users/dongcheng/Desktop/Project collection/抖词/抖词/Classes/Me/square.plist" atomically:YES];
         NSArray *dicArr = responseObject[@"square_list"];
+        NSMutableArray *dicArr2 = [[NSMutableArray alloc] init];
+        [dicArr2 addObject:dicArr[13]];
+        [dicArr2 addObject:dicArr[14]];
+        
         //字典数组转模型数组
-       _squareItems = [DCSquareItem mj_objectArrayWithKeyValuesArray:dicArr];
+       _squareItems = [DCSquareItem mj_objectArrayWithKeyValuesArray:dicArr2];
+        
+        //处理数据
+        [self resloveData];
+        //设置collectionView的高度
+        CGFloat itemWH2 = ([UIScreen mainScreen].bounds.size.width - 3)/4;
+        self.collectionView.dc_height = 7 * itemWH2 + 5;
+        //设置tableview的滚动范围
+        self.tableView.tableFooterView = self.collectionView;
         //刷新表格
         [self.collectionView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -53,7 +71,19 @@ static NSString * const ID = @"cell";
     }];
     
 }
-
+#pragma mark - 处理数据
+- (void)resloveData {
+    //判断cell缺几个
+    NSInteger count = self.squareItems.count;
+    NSInteger exter = count % 4;
+    if (exter) {
+        exter = 4 - exter;
+        for (int i = 0; i < exter; i++) {
+            DCSquareItem *item = [[DCSquareItem alloc] init];
+            [self.squareItems addObject:item];
+        }
+    }
+}
 #pragma mark - 设置tableView的底部视图
 - (void)setupFootView {
     //1.流式布局
@@ -73,9 +103,22 @@ static NSString * const ID = @"cell";
     self.tableView.tableFooterView = collectionView;
     //设置数据源协议的对象
     collectionView.dataSource = self;
+    //设置委托协议的对象
+    collectionView.delegate = self;
+    //禁止collection滚动
+    collectionView.scrollEnabled = NO;
     //注册cell
-    //[collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ID];
     [collectionView registerNib:[UINib nibWithNibName:@"DCSquareCell" bundle:nil] forCellWithReuseIdentifier:ID];
+}
+
+#pragma mark - 实现集合视图的委托协议方法
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    //跳转界面   push跳转
+    DCWebViewController *webVc = [[DCWebViewController alloc] init];
+    DCSquareItem *item = self.squareItems[indexPath.row];
+    if (![item.url containsString:@"http"]) return;
+    webVc.url = [NSURL URLWithString:item.url];
+    [self.navigationController pushViewController:webVc animated:YES];
 }
 
 #pragma mark - 实现集合视图的数据源协议方法
@@ -96,8 +139,9 @@ static NSString * const ID = @"cell";
 - (void)setupNavBar {
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
     UIBarButtonItem *moonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
-    self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
-    self.navigationItem.title = @"我的";
+    //self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
+    self.navigationItem.rightBarButtonItems = @[settingItem];
+    self.navigationItem.title = @"休闲";
 }
 
 //跳转到设置界面

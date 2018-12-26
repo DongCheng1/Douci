@@ -31,13 +31,13 @@
 - (void)PBact {
     //JPVideoPlayerDouyinViewController *jpVc = [[JPVideoPlayerDouyinViewController alloc]init];
     //[self presentViewController:jpVc animated:YES completion:nil];
-    NSLog(@"我是中间的button");
+    //NSLog(@"我是中间的button");
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     //布局tabBarButton
-    NSLog(@"--->%@",self.subviews);
+    //NSLog(@"--->%@",self.subviews);
     CGFloat btnX = 0;
     CGFloat btnH = self.frame.size.height;
     CGFloat btnW = self.frame.size.width/(self.items.count + 1);

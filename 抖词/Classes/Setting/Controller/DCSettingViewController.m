@@ -13,10 +13,12 @@
 @end
 
 @implementation DCSettingViewController
-
+//注册cell前必须要先定义一个标识符
+static NSString * const ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //注册cell
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,23 +29,71 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+    //计算整个应用数据的缓存数据，整个应用程序的缓存数据存放在沙盒中
+    cell.textLabel.text = [self sizeStr];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
     return cell;
 }
-*/
 
+//点击cell的动作
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSArray *arr = [mgr contentsOfDirectoryAtPath:cachePath error:nil];
+    for (NSString *subPath in arr) {
+        NSString *filePath = [cachePath stringByAppendingPathComponent:subPath];
+        [mgr removeItemAtPath:filePath error:nil];
+    }
+    [self.tableView reloadData];
+}
+
+
+//缓存数据大小
+- (NSString *)sizeStr {
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSInteger totalSize = [self getFileSize:cachePath];
+    NSString *sizeStr = @"清除缓存";
+    if (totalSize > 1000 * 1000) {
+        CGFloat sizeF = totalSize / 1000.0 /1000.0;
+        sizeStr = [NSString stringWithFormat:@"%@(%.lfMB)",sizeStr,sizeF];
+    }else if (totalSize > 1000) {
+        CGFloat sizeF = totalSize / 1000.0;
+        sizeStr = [NSString stringWithFormat:@"%@(%.lfkB)",sizeStr,sizeF];
+    }else if (totalSize > 0) {
+        sizeStr = [NSString stringWithFormat:@"%@(%.ldB)",sizeStr,totalSize];
+    }
+    return sizeStr;
+}
+
+
+//应用数据的缓存
+- (NSInteger)getFileSize:(NSString *)directoryPath {
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    NSArray *subPaths = [mgr subpathsAtPath:directoryPath];
+    NSInteger totalSize = 0;
+    for (NSString *subPath in subPaths) {
+        //获取文件全路径
+        NSString *filePath = [directoryPath stringByAppendingPathComponent:subPath];
+        if ([filePath containsString:@".DS"]) continue;
+        BOOL isDirectory;
+        BOOL isExist = [mgr fileExistsAtPath:filePath isDirectory:&isDirectory];
+        if (!isExist || isDirectory) continue;
+        NSDictionary *dic = [mgr attributesOfItemAtPath:directoryPath error:nil];
+        NSInteger fileSize = [dic fileSize];
+        totalSize += fileSize;
+    }
+    return totalSize;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

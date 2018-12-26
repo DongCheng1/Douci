@@ -23,7 +23,7 @@
 }
 
 - (void)setItem:(DCSquareItem *)item {
-    _item = item;
+    _item = item;//将模型上的数据展示到item上
     [_iconView sd_setImageWithURL:[NSURL URLWithString:item.icon]];
     _nameView.text = item.name;
 }

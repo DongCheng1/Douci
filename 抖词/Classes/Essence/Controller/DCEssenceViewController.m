@@ -32,7 +32,7 @@
 }
 
 - (void)game {
-    NSLog(@"hahhaha");
+    //NSLog(@"hahhaha");
 }
 
 - (void)didReceiveMemoryWarning {

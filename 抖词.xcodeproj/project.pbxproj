@@ -12,6 +12,8 @@
 		B41BA88921D10B91006B1D5B /* DCSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA88721D10B91006B1D5B /* DCSquareCell.m */; };
 		B41BA88A21D10B91006B1D5B /* DCSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41BA88821D10B91006B1D5B /* DCSquareCell.xib */; };
 		B41BA88D21D13029006B1D5B /* DCSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA88C21D13029006B1D5B /* DCSquareItem.m */; };
+		B41BA89421D25EF7006B1D5B /* DCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA89221D25EF7006B1D5B /* DCWebViewController.m */; };
+		B41BA89521D25EF7006B1D5B /* DCWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41BA89321D25EF7006B1D5B /* DCWebViewController.xib */; };
 		B447241321BEF4A700CCD2E0 /* DCPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */; };
 		B447241421BEF4A700CCD2E0 /* DCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723FD21BEF4A700CCD2E0 /* DCEssenceViewController.m */; };
 		B447241521BEF4A700CCD2E0 /* DCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B447240221BEF4A700CCD2E0 /* DCMeViewController.m */; };
@@ -81,6 +83,9 @@
 		B41BA88821D10B91006B1D5B /* DCSquareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCSquareCell.xib; sourceTree = "<group>"; };
 		B41BA88B21D13029006B1D5B /* DCSquareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCSquareItem.h; sourceTree = "<group>"; };
 		B41BA88C21D13029006B1D5B /* DCSquareItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCSquareItem.m; sourceTree = "<group>"; };
+		B41BA89121D25EF7006B1D5B /* DCWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCWebViewController.h; sourceTree = "<group>"; };
+		B41BA89221D25EF7006B1D5B /* DCWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCWebViewController.m; sourceTree = "<group>"; };
+		B41BA89321D25EF7006B1D5B /* DCWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCWebViewController.xib; sourceTree = "<group>"; };
 		B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPublishViewController.m; sourceTree = "<group>"; };
 		B44723F721BEF4A700CCD2E0 /* DCPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPublishViewController.h; sourceTree = "<group>"; };
 		B44723FC21BEF4A700CCD2E0 /* DCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCEssenceViewController.h; sourceTree = "<group>"; };
@@ -312,6 +317,9 @@
 				B447240321BEF4A700CCD2E0 /* DCMeViewController.h */,
 				B447240221BEF4A700CCD2E0 /* DCMeViewController.m */,
 				B41BA88121D0CDE0006B1D5B /* DCMeViewController.storyboard */,
+				B41BA89121D25EF7006B1D5B /* DCWebViewController.h */,
+				B41BA89221D25EF7006B1D5B /* DCWebViewController.m */,
+				B41BA89321D25EF7006B1D5B /* DCWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -537,7 +545,7 @@
 			path = "../../../../明日头条/明日头条/Other/Category";
 			sourceTree = "<group>";
 		};
-		B4CFB07221C816D400D834BD /* 启动图片 */ = {
+		B4CFB07221C816D400D834BD /* QDTP */ = {
 			isa = PBXGroup;
 			children = (
 				B4CFB07321C816D400D834BD /* LaunchImage@2x.png */,
@@ -548,7 +556,7 @@
 				B4CFB07821C816D400D834BD /* LaunchImage-700-568h@2x.png */,
 				B4CFB07921C816D400D834BD /* LaunchImage.png */,
 			);
-			path = "启动图片";
+			path = QDTP;
 			sourceTree = "<group>";
 		};
 		B4F8AB2F21A701A200FB6C7A = {
@@ -577,7 +585,7 @@
 				B4F8ABA021A975D800FB6C7A /* JPVideoPlayerDouyinViewController.m */,
 				B4F8AB4421A701A200FB6C7A /* Main.storyboard */,
 				B4F8AB4721A701A300FB6C7A /* Assets.xcassets */,
-				B4CFB07221C816D400D834BD /* 启动图片 */,
+				B4CFB07221C816D400D834BD /* QDTP */,
 				B4F8AB4921A701A300FB6C7A /* LaunchScreen.storyboard */,
 				B4F8AB4C21A701A300FB6C7A /* Info.plist */,
 				B44723EC21BEF38F00CCD2E0 /* Other */,
@@ -694,6 +702,7 @@
 			files = (
 				B4CFB08021C816D400D834BD /* LaunchImage.png in Resources */,
 				B49BFF4021D08F1500FC4825 /* DCFriendshipViewController.xib in Resources */,
+				B41BA89521D25EF7006B1D5B /* DCWebViewController.xib in Resources */,
 				B4CFB07A21C816D400D834BD /* LaunchImage@2x.png in Resources */,
 				B41BA88221D0CDE0006B1D5B /* DCMeViewController.storyboard in Resources */,
 				B49BFF0321CECA7E00FC4825 /* DCADViewController.xib in Resources */,
@@ -783,6 +792,7 @@
 				B447241421BEF4A700CCD2E0 /* DCEssenceViewController.m in Sources */,
 				B447244121C3101300CCD2E0 /* DCSettingViewController.m in Sources */,
 				B447241721BEF4A700CCD2E0 /* DCTabBarController.m in Sources */,
+				B41BA89421D25EF7006B1D5B /* DCWebViewController.m in Sources */,
 				B4F8ABC721A9763A00FB6C7A /* JPVideoPlayerResourceLoader.m in Sources */,
 				B4F8ABC621A9763A00FB6C7A /* JPVideoPlayerCompat.m in Sources */,
 				B4F8AB3D21A701A200FB6C7A /* AppDelegate.m in Sources */,

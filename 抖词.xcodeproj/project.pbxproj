@@ -14,6 +14,7 @@
 		B41BA88D21D13029006B1D5B /* DCSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA88C21D13029006B1D5B /* DCSquareItem.m */; };
 		B41BA89421D25EF7006B1D5B /* DCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA89221D25EF7006B1D5B /* DCWebViewController.m */; };
 		B41BA89521D25EF7006B1D5B /* DCWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41BA89321D25EF7006B1D5B /* DCWebViewController.xib */; };
+		B41BA89A21D3C550006B1D5B /* DCFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B41BA89921D3C550006B1D5B /* DCFileTool.m */; };
 		B447241321BEF4A700CCD2E0 /* DCPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */; };
 		B447241421BEF4A700CCD2E0 /* DCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44723FD21BEF4A700CCD2E0 /* DCEssenceViewController.m */; };
 		B447241521BEF4A700CCD2E0 /* DCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B447240221BEF4A700CCD2E0 /* DCMeViewController.m */; };
@@ -35,7 +36,6 @@
 		B49BFF4021D08F1500FC4825 /* DCFriendshipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49BFF3021D08F1500FC4825 /* DCFriendshipViewController.xib */; };
 		B49BFF4121D08F1500FC4825 /* DCFriendshipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BFF3221D08F1500FC4825 /* DCFriendshipViewController.m */; };
 		B49BFF4221D08F1500FC4825 /* DCFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BFF3621D08F1500FC4825 /* DCFastButton.m */; };
-		B49BFF4321D08F1500FC4825 /* DCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BFF3721D08F1500FC4825 /* DCTextField.m */; };
 		B49BFF4421D08F1500FC4825 /* DCFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49BFF3821D08F1500FC4825 /* DCFastLoginView.xib */; };
 		B49BFF4521D08F1500FC4825 /* DCLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49BFF3921D08F1500FC4825 /* DCLoginRegisterView.xib */; };
 		B49BFF4621D08F1500FC4825 /* DCLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BFF3A21D08F1500FC4825 /* DCLoginRegisterView.m */; };
@@ -86,6 +86,8 @@
 		B41BA89121D25EF7006B1D5B /* DCWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCWebViewController.h; sourceTree = "<group>"; };
 		B41BA89221D25EF7006B1D5B /* DCWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCWebViewController.m; sourceTree = "<group>"; };
 		B41BA89321D25EF7006B1D5B /* DCWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCWebViewController.xib; sourceTree = "<group>"; };
+		B41BA89821D3C550006B1D5B /* DCFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFileTool.h; sourceTree = "<group>"; };
+		B41BA89921D3C550006B1D5B /* DCFileTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCFileTool.m; sourceTree = "<group>"; };
 		B44723F621BEF4A700CCD2E0 /* DCPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPublishViewController.m; sourceTree = "<group>"; };
 		B44723F721BEF4A700CCD2E0 /* DCPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPublishViewController.h; sourceTree = "<group>"; };
 		B44723FC21BEF4A700CCD2E0 /* DCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCEssenceViewController.h; sourceTree = "<group>"; };
@@ -124,12 +126,10 @@
 		B49BFF3421D08F1500FC4825 /* DCFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFastLoginView.h; sourceTree = "<group>"; };
 		B49BFF3521D08F1500FC4825 /* DCLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLoginRegisterView.h; sourceTree = "<group>"; };
 		B49BFF3621D08F1500FC4825 /* DCFastButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFastButton.m; sourceTree = "<group>"; };
-		B49BFF3721D08F1500FC4825 /* DCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTextField.m; sourceTree = "<group>"; };
 		B49BFF3821D08F1500FC4825 /* DCFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCFastLoginView.xib; sourceTree = "<group>"; };
 		B49BFF3921D08F1500FC4825 /* DCLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCLoginRegisterView.xib; sourceTree = "<group>"; };
 		B49BFF3A21D08F1500FC4825 /* DCLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLoginRegisterView.m; sourceTree = "<group>"; };
 		B49BFF3B21D08F1500FC4825 /* DCFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFastLoginView.m; sourceTree = "<group>"; };
-		B49BFF3C21D08F1500FC4825 /* DCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTextField.h; sourceTree = "<group>"; };
 		B49BFF3D21D08F1500FC4825 /* DCFastButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFastButton.h; sourceTree = "<group>"; };
 		B49BFF4921D08F6400FC4825 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		B49BFF4A21D08F6400FC4825 /* UIImage+image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
@@ -209,6 +209,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B41BA89621D3A5B0006B1D5B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B41BA89721D3C13F006B1D5B /* File */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B41BA89721D3C13F006B1D5B /* File */ = {
+			isa = PBXGroup;
+			children = (
+				B41BA89821D3C550006B1D5B /* DCFileTool.h */,
+				B41BA89921D3C550006B1D5B /* DCFileTool.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		B44723EC21BEF38F00CCD2E0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +240,7 @@
 		B44723ED21BEF4A700CCD2E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B41BA89621D3A5B0006B1D5B /* Tool */,
 				B49BFF2B21D08F1500FC4825 /* FriendTrend */,
 				B49BFF1921D08B1700FC4825 /* New */,
 				B49BFEF921CECA7D00FC4825 /* AD */,
@@ -520,12 +538,10 @@
 				B49BFF3421D08F1500FC4825 /* DCFastLoginView.h */,
 				B49BFF3521D08F1500FC4825 /* DCLoginRegisterView.h */,
 				B49BFF3621D08F1500FC4825 /* DCFastButton.m */,
-				B49BFF3721D08F1500FC4825 /* DCTextField.m */,
 				B49BFF3821D08F1500FC4825 /* DCFastLoginView.xib */,
 				B49BFF3921D08F1500FC4825 /* DCLoginRegisterView.xib */,
 				B49BFF3A21D08F1500FC4825 /* DCLoginRegisterView.m */,
 				B49BFF3B21D08F1500FC4825 /* DCFastLoginView.m */,
-				B49BFF3C21D08F1500FC4825 /* DCTextField.h */,
 				B49BFF3D21D08F1500FC4825 /* DCFastButton.h */,
 			);
 			path = View;
@@ -797,8 +813,8 @@
 				B4F8ABC621A9763A00FB6C7A /* JPVideoPlayerCompat.m in Sources */,
 				B4F8AB3D21A701A200FB6C7A /* AppDelegate.m in Sources */,
 				B4F8AB4E21A701A300FB6C7A /* main.m in Sources */,
-				B49BFF4321D08F1500FC4825 /* DCTextField.m in Sources */,
 				B4F8ABCF21A9763A00FB6C7A /* UITableViewCell+WebVideoCache.m in Sources */,
+				B41BA89A21D3C550006B1D5B /* DCFileTool.m in Sources */,
 				B49BFF0421CECA7E00FC4825 /* DCADViewController.m in Sources */,
 				B49BFF2721D08B1700FC4825 /* DCBQTableViewController.m in Sources */,
 				B49BFF4221D08F1500FC4825 /* DCFastButton.m in Sources */,

@@ -138,7 +138,7 @@ static NSString * const ID = @"cell";
 //设置导航条
 - (void)setupNavBar {
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
-    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
+    //UIBarButtonItem *moonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
     //self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
     self.navigationItem.rightBarButtonItems = @[settingItem];
     self.navigationItem.title = @"休闲";

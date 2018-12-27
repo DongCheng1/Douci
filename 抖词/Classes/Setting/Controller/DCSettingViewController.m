@@ -8,6 +8,7 @@
 
 #import "DCSettingViewController.h"
 #import "UIBarButtonItem+Item.h"
+#import "DCFileTool.h"
 @interface DCSettingViewController ()
 
 @end
@@ -39,29 +40,24 @@ static NSString * const ID = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
-    //计算整个应用数据的缓存数据，整个应用程序的缓存数据存放在沙盒中
+    //显示缓存数据
     cell.textLabel.text = [self sizeStr];
-    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
     return cell;
 }
 
-//点击cell的动作
+//点击cell，清除缓存数据
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSFileManager *mgr = [NSFileManager defaultManager];
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    NSArray *arr = [mgr contentsOfDirectoryAtPath:cachePath error:nil];
-    for (NSString *subPath in arr) {
-        NSString *filePath = [cachePath stringByAppendingPathComponent:subPath];
-        [mgr removeItemAtPath:filePath error:nil];
-    }
+    [DCFileTool removeDirectoryPath:cachePath];
     [self.tableView reloadData];
 }
 
 
-//缓存数据大小
+
+//设置缓存数据文字
 - (NSString *)sizeStr {
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    NSInteger totalSize = [self getFileSize:cachePath];
+    NSInteger totalSize = [DCFileTool getFileSize:cachePath];
     NSString *sizeStr = @"清除缓存";
     if (totalSize > 1000 * 1000) {
         CGFloat sizeF = totalSize / 1000.0 /1000.0;
@@ -76,24 +72,7 @@ static NSString * const ID = @"cell";
 }
 
 
-//应用数据的缓存
-- (NSInteger)getFileSize:(NSString *)directoryPath {
-    NSFileManager *mgr = [NSFileManager defaultManager];
-    NSArray *subPaths = [mgr subpathsAtPath:directoryPath];
-    NSInteger totalSize = 0;
-    for (NSString *subPath in subPaths) {
-        //获取文件全路径
-        NSString *filePath = [directoryPath stringByAppendingPathComponent:subPath];
-        if ([filePath containsString:@".DS"]) continue;
-        BOOL isDirectory;
-        BOOL isExist = [mgr fileExistsAtPath:filePath isDirectory:&isDirectory];
-        if (!isExist || isDirectory) continue;
-        NSDictionary *dic = [mgr attributesOfItemAtPath:directoryPath error:nil];
-        NSInteger fileSize = [dic fileSize];
-        totalSize += fileSize;
-    }
-    return totalSize;
-}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
